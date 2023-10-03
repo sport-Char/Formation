@@ -1,7 +1,8 @@
 import streamlit as st
 import pandas as pd
-import matplotlib.pyplot as plt
 import seaborn as sns
+import matplotlib.pyplot as plt
+
 
 def getWinner(score):
     numbers = score.split(':')  # Divisez la première partie en deux nombres: '2' et '5'
