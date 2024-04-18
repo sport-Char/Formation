@@ -62,6 +62,8 @@ if uploaded_file is not None:
     df['influence'] = df['influence'].str.replace('.', '').str.replace('X', '0').fillna(0).astype(int)
     # Supprimez les lignes où la colonne 'score' contient le caractère "-"
     df = df[df['score'] != "-"]
+    df = df.drop('compo', axis=1)
+    df = df.drop('selected_team', axis=1)
     df = df.dropna(subset=["CompoHome"])
     df = df.dropna(subset=["CompoAway"])
     df = df[df['score'] != '-:-']
