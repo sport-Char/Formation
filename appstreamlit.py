@@ -71,9 +71,9 @@ if uploaded_file is not None:
     valeurs_uniques_concat = list(set(valeurs_uniques_home) | set(valeurs_uniques_away))
 
     st.sidebar.title("Choisir votre(vos) formation(s)")
-    compoA = st.sidebar.multiselect("Choix formation équipe Home",valeurs_uniques_concat)
+    compoA = st.sidebar.multiselect("Choix formation équipe A",valeurs_uniques_concat)
     st.sidebar.title("Choisir la(les) formation(s) de l'équipe adverse")
-    compoB = st.sidebar.multiselect("Choix formation équipe Away",valeurs_uniques_concat)
+    compoB = st.sidebar.multiselect("Choix formation équipe B",valeurs_uniques_concat)
     # Convertissez la colonne 'score' en entiers (si nécessaire)
     influence = st.sidebar.slider("Affluence",0,max(df["influence"]),value=0)
     if (len(compoA)>0) & (len(compoB)>0):
